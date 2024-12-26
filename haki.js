@@ -140,7 +140,7 @@ async function Abhiy() {
       const packageVersion = require("./package.json").version;
       const totalPlugins = events.commands.length;
       const workType = config.WORK_TYPE;
-      const statusMessage = `shaka connected  ✅\nᴠᴇʀsɪᴏɴ: ${packageVersion}\n ᴄᴍᴅs: ${totalPlugins}\ᴡᴏʀᴋᴛʏᴘᴇ: ${workType}\n 𝗺𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗯𝘆 𝗵𝗮𝗸𝗶`;
+      const statusMessage = `Nikka x md connected  ✅\nᴠᴇʀsɪᴏɴ: ${packageVersion}\n ᴄᴍᴅs: ${totalPlugins}\ᴡᴏʀᴋᴛʏᴘᴇ: ${workType}\n 𝗺𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗯𝘆 𝗵𝗮𝗸𝗶`;
 
       await conn.sendMessage(conn.user.id, {
         image: { url: "https://files.catbox.moe/mnp025.jpg" },
