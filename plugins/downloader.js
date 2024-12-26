@@ -12,7 +12,7 @@ command(
     pattern: "song ?(.*)",
     fromMe: false,
     desc: "Search for songs using a keyword and download the first result",
-    type: "search",
+    type: "downloader",
   },
   async (message, match) => {
     try {
@@ -87,7 +87,7 @@ command(
         pattern: "apk",
         desc: "Downloads APKs",
         fromMe: isPrivate,
-        type: "user",
+        type: "downloader",
     },
     async (message, match) => {
       const query = match.trim();
