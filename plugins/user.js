@@ -40,7 +40,6 @@ command({
 });
 const plugins = require("../lib/event");
 const {
-    command,
     isPrivate,
     clockString,
     getUrl,
