@@ -56,35 +56,9 @@ const got = require("got");
 const fs = require("fs");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
-    {
-        pattern: "ping",
-        fromMe: isPrivate,
-        desc: "To check ping",
-        type: "user",
-    },
-    async (message, match, client) => {
-        const start = new Date().getTime();
-      let { key } = await message.sendMessage(`*Ping 🧚‍♂️*`);
-        const end = new Date().getTime();
-var speed = end - start;
- 
-await new Promise(t => setTimeout(t,0))
-         await message.client.sendMessage(message.jid,{text:`*Pong* 🧚‍♂️
-${speed} *𝚖𝚜*` , edit: key});
-})
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
+
 
 command(
   {
@@ -682,3 +656,22 @@ command(
     }
   }
 );
+command(
+    {
+        pattern: "ping",
+        fromMe: isPrivate,
+        desc: "To check ping",
+        type: "user",
+    },
+    async (message, match, client) => {
+     
+        const start = new Date().getTime();
+      let { key } = await message.sendMessage(`*checking...*`);
+        const end = new Date().getTime();
+var speed = end - start;
+ 
+await new Promise(t => setTimeout(t,0))
+         await message.client.sendMessage(message.jid,{text:`*Pong* 🧚‍♂️
+${speed} *𝚖𝚜*` , edit: key});
+    await message.react("✅️")
+})
